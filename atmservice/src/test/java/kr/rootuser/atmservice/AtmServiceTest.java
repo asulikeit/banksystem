@@ -62,6 +62,7 @@ public class AtmServiceTest {
 		List<Object> accList = Arrays.asList(accs.split(","));
 		assertThat(accList.size()).isEqualTo(3);
 		
+//		4) get an account
 		MvcResult accResult = mvc.perform(
 				MockMvcRequestBuilders.get("/cards/" + cardNumber + "/accounts/BALANCE")
 				.header("X-TRANID", tranId)).
